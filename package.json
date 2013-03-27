@@ -1,0 +1,18 @@
+{
+  "name": "onload",
+  "repo": "component/onload",
+  "description": "Onload transitions",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "classes-component": "*",
+    "event-component": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "component": {
+    "scripts": {
+      "onload/index.js": "index.js"
+    }
+  }
+}
