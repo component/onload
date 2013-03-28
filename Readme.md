@@ -33,6 +33,10 @@ img.onload {
 }
 ```
 
+## API
+
+ - `onload(el, [classname])`
+
 ## License
 
   MIT
