@@ -18,9 +18,11 @@
 <body>
   <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSiBmfbh9GdYzcVwVA4hAPnyc00aXvgMT6hkokmV5EL8On6AM5apQ" />
   <script>
-    var onload = require('onload');
-    var img = document.querySelector('img');
-    onload(img);
+    (function(){
+      var onload = require('onload');
+      var img = document.querySelector('img');
+      onload(img);
+    })();
   </script>
 </body>
 </html>
