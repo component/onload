@@ -2,7 +2,8 @@
 # onload
 
   Add onload transitions to DOM elements that
-  emit "load" events such as images.
+  emit "load" events such as images by adding
+  ".preload" and ".onload" classnames accordingly.
 
 ## Installation
 
@@ -22,20 +23,26 @@ onload(img);
 
 ```css
 img {
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: opacity 300ms;
   -moz-transition: opacity 300ms;
   transition: opacity 300ms;
 }
 
-img.onload {
-  opacity: 1;
+img.preload {
+  opacity: 0;
 }
 ```
 
 ## API
 
- - `onload(el, [classname])`
+ - `onload(el)`
+
+## Images
+
+  Images which are `.complete` are immediately
+  assigned ".onload" so that effects can be applied
+  to non-cached images only.
 
 ## License
 

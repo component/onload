@@ -7,16 +7,24 @@ var classes = require('classes')
   , event = require('event')
 
 /**
- * Add `classname` class to `el` when loaded.
+ * Toggle .onload and .preload classes based on the state of `el`.
  *
  * @param {Element} el
- * @param {String} [classname]
  * @api public
  */
 
-module.exports = function(el, classname){
-  classname = classname || 'onload';
+module.exports = function(el){
+  var c = classes(el);
+
+  // cached images
+  if (el.complete) {
+    c.add('onload');
+    return;
+  }
+
+  c.add('preload');
   event.bind(el, 'load', function(){
-    classes(el).add(classname);
+    c.remove('preload');
+    c.add('onload');
   });
 };
