@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -10,10 +9,11 @@ var classes = require('classes')
  * Toggle .onload and .preload classes based on the state of `el`.
  *
  * @param {Element} el
+ * @param {Function} fn
  * @api public
  */
 
-module.exports = function(el){
+module.exports = function(el, fn){
   var c = classes(el);
 
   // cached images
@@ -26,5 +26,6 @@ module.exports = function(el){
   event.bind(el, 'load', function(){
     c.remove('preload');
     c.add('onload');
+    fn && fn();
   });
 };
