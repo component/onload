@@ -14,5 +14,9 @@
     "scripts": {
       "onload/index.js": "index.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/onload.git"
   }
 }
